@@ -1,0 +1,52 @@
+@use "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --foreground-rgb: rgb(211, 216, 232);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #0d1224;
+}
+
+/* Hero Code Box Hover Animation */
+.hero-code-box {
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-code-box:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 0 30px rgba(246, 38, 175, 0.3), 0 0 60px rgba(130, 40, 236, 0.2);
+  border-color: #a855f7 !important;
+}
+
+#sticky-card-1 {
+  --index: 1;
+}
+
+#sticky-card-2 {
+  --index: 2;
+}
+
+#sticky-card-3 {
+  --index: 3;
+}
+
+#sticky-card-4 {
+  --index: 4;
+}
+
+.sticky-card {
+  // padding-top: calc(var(--index) * 2.5rem);
+  top: calc(var(--index) * 4rem);
+}
